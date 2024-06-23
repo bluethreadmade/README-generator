@@ -1,5 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
+// resister inquirer searchable list plugin
+inquirer.registerPrompt('search-list', require('inquirer-search-list'));
 const fs = require("fs");
 const badgelinks = require('./badgelinks');
 
@@ -30,7 +32,7 @@ const questions = [
     //     description: 'Usage',
     // },
     {
-        type: 'list',
+        type: 'search-list',
         name: 'license',
         choices: licenseChoices,
         description: 'License',
