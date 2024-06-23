@@ -2,6 +2,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const badgelinks = require('./badgelinks');
+const licenseChoices = badgelinks;
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -28,10 +29,7 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        choices: [ 
-            `Apache 2.0 License`,
-            `Boost Software License 1.0`,
-        ],
+        choices: licenseChoices,
         description: 'License',
     },
     // {
@@ -79,7 +77,7 @@ function init() {
     const selectedLicense = answers.license;
     
     // search the badgelinks array for the selected license and return the badge link using the cariable licenseBadgeLink
-    const licenseBadgeLink = badgelinks.find(x => x.licenseName === selectedLicense).link;
+    const licenseBadgeLink = badgelinks.find(x => x.name === selectedLicense).link;
 
     // create a variable for the readme content and what should be in it
     const generatereadMEContent = ({ description, contents }) =>
