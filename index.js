@@ -62,8 +62,8 @@ function init() {
 
     // create a variable for the readme content and what should be in it
     const generatereadMEContent = ({ description, contents }) =>
-        `$$ ${description}
-        $$ ${contents}`;
+        `# ${description}
+        ## ${contents}`;
 
     // ask the questions
     inquirer
