@@ -2,6 +2,9 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const badgelinks = require('./badgelinks');
+
+// set varible to use badgelinks array as the choices array
+
 const licenseChoices = badgelinks;
 
 // TODO: Create an array of questions for user input
