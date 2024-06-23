@@ -35,7 +35,7 @@ const questions = [
         type: 'search-list',
         message: 'Select License',
         name: 'license',
-        choices: licenseChoices.map(license => ({name: license.name, value: license})),
+        choices: licenseChoices.map(license => ({name: license.name, value: license.link})),
         description: 'License',
     },
     // {
@@ -80,8 +80,8 @@ function init() {
         .prompt(questions)
         .then((answers) => {
                 // get the license answer from the user
-    //const selectedLicense = answers.license;
-    const selectedLicense = JSON.stringify(answers.license, null, "  ");
+    const selectedLicense = answers.license;
+    //const selectedLicense = JSON.stringify(answers.license, null, "  ");
     
     // search the badgelinks array for the selected license and return the badge link using the cariable licenseBadgeLink
     //const licenseBadgeLink = badgelinks.find(x => x.name === selectedLicense).link;
