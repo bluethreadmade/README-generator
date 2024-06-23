@@ -41,8 +41,13 @@ const questions = [
     // },
     // {
     //     type: 'input',
-    //     name: 'questions',
-    //     description: 'Questions',
+    //     name: 'email',
+    //     description: 'Email Address',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'userName',
+    //     description: 'GitHub username',
     // },
    
 ];
