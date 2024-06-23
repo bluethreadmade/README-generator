@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
+const badgelinks = require('./badgelinks');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -27,7 +28,10 @@ const questions = [
     {
         type: 'list',
         name: 'license',
-        choices: [ "A", "B", "C" ],
+        choices: [ 
+            `Apache 2.0 License`,
+            `Boost Software License 1.0`,
+        ],
         description: 'License',
     },
     // {
@@ -64,17 +68,26 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {    
+function init() {
 
-    // create a variable for the readme content and what should be in it
-    const generatereadMEContent = ({ description, contents }) =>
-        `# ${description}
-        ## ${contents}`;
 
     // ask the questions
     inquirer
         .prompt(questions)
         .then((answers) => {
+                // get the license answer from the user
+    const selectedLicense = answers.license;
+    
+    // search the badgelinks array for the selected license and return the badge link using the cariable licenseBadgeLink
+    const licenseBadgeLink = badgelinks.find(x => x.licenseName === selectedLicense).link;
+
+    // create a variable for the readme content and what should be in it
+    const generatereadMEContent = ({ description, contents }) =>
+        
+        `${licenseBadgeLink}  
+# ${description}
+## ${contents}`
+
             const readMEContent = generatereadMEContent(answers);
 
             // call the write to file function to create a file called readme1.md and fill it with the readmecontent
