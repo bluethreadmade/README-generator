@@ -24,11 +24,12 @@ const questions = [
     //     name: 'usage',
     //     description: 'Usage',
     // },
-    // {
-    //     type: 'input',
-    //     name: 'license',
-    //     description: 'License',
-    // },
+    {
+        type: 'list',
+        name: 'license',
+        choices: [ "A", "B", "C" ],
+        description: 'License',
+    },
     // {
     //     type: 'input',
     //     name: 'contributing',
