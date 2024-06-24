@@ -48,16 +48,16 @@ const questions = [
     //     name: 'tests',
     //     description: 'Tests',
     // },
-    // {
-    //     type: 'input',
-    //     name: 'email',
-    //     description: 'Email Address',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'userName',
-    //     description: 'GitHub username',
-    // },
+    {
+        type: 'input',
+        name: 'email',
+        description: 'Email Address',
+    },
+    {
+        type: 'input',
+        name: 'userName',
+        description: 'GitHub username',
+    },
    
 ];
 
@@ -83,7 +83,7 @@ function init() {
         // pull license name from license answer
         const selectedLicenseName = JSON.stringify(answers.license.name, null, "  ");
 
-        // pull license link from license answer
+        // pull license link from license answer - creates badge
         const selectedLicenseLink = JSON.stringify(answers.license.link, null, "  ");
 
     // create a variable for the readme content and what should be in it
