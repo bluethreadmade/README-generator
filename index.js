@@ -80,18 +80,12 @@ function init() {
         .prompt(questions)
         .then((answers) => {
             
-        // pull license name from license answer
-        const selectedLicenseName = answers.license.name;
-
-        // pull license link from license answer - creates badge
-        const selectedLicenseLink = answers.license.link;
-
-        // create a variable for the readme content and what should be in it
-        const generatereadMEContent = ({ title, description, installation, usage, contributing, tests, userName, email }) =>
+         // create a variable for the readme content and what should be in it
+        const generatereadMEContent = ({ title, description, installation, usage, contributing, tests, userName, email, license }) =>
         
 `
 # ${title}
-${selectedLicenseLink}
+${license.link}
 ## Description
 ${description}
 ## Table of Contents
@@ -106,7 +100,7 @@ ${installation}
 ## Usage
 ${usage}
 ## License
-This project is licensed under ${selectedLicenseName}.
+This project is licensed under ${license.name}.
 ## Contributing
 ${contributing}
 ## Tests
