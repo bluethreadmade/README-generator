@@ -4,6 +4,7 @@ const inquirer = require("inquirer");
 inquirer.registerPrompt('search-list', require('inquirer-search-list'));
 const fs = require("fs");
 const badgelinks = require('./badgelinks');
+const { title } = require("process");
 
 // set varible to use badgelinks array as the choices array
 
@@ -11,6 +12,11 @@ const licenseChoices = badgelinks;
 
 // TODO: Create an array of questions for user input
 const questions = [
+    {
+        type: 'input',
+        name: 'title',
+        description: 'What is the title of your project',
+    },
     {
         type: 'input',
         name: 'description',
@@ -81,10 +87,10 @@ function init() {
         const selectedLicenseLink = JSON.stringify(answers.license.link, null, "  ");
 
         // create a variable for the readme content and what should be in it
-        const generatereadMEContent = ({ description, installation, usage, contributing, tests, userName, email }) =>
+        const generatereadMEContent = ({ title, description, installation, usage, contributing, tests, userName, email }) =>
         
 `
-# Title
+# ${title}
 ${selectedLicenseLink}
 ## Description
 ${description}
