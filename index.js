@@ -35,7 +35,7 @@ const questions = [
         type: 'search-list',
         message: 'Select License',
         name: 'license',
-        choices: licenseChoices.map(license => ({name: license.name, value: license.link})),
+        choices: licenseChoices.map(license => ({name: license.name, value: license})),
         description: 'License',
     },
     // {
@@ -79,17 +79,18 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
-                // get the license answer from the user
-    const selectedLicense = answers.license;
-    //const selectedLicense = JSON.stringify(answers.license, null, "  ");
-    
-    // search the badgelinks array for the selected license and return the badge link using the cariable licenseBadgeLink
-    //const licenseBadgeLink = badgelinks.find(x => x.name === selectedLicense).link;
+            
+        // pull license name from license answer
+        const selectedLicenseName = JSON.stringify(answers.license.name, null, "  ");
+
+        // pull license link from license answer
+        const selectedLicenseLink = JSON.stringify(answers.license.link, null, "  ");
 
     // create a variable for the readme content and what should be in it
     const generatereadMEContent = ({ description, contents }) =>
         
-        `${selectedLicense}  
+        `${selectedLicenseLink}
+        ${selectedLicenseName}
 # ${description}
 ## ${contents}`
 
