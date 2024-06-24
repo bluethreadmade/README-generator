@@ -1,7 +1,5 @@
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-
-
 # Title
+`${selectedLicenseLink}`
 ## Description
 ## Table of Contents
 1. [Installation](#installation)
@@ -11,14 +9,15 @@
 5. [Tests](#tests)
 6. [Questions](#questions)
 ## Installation
+`${installation}`
 ## Usage
+`${usage}`
 ## License
+This project is licensed under `${selectedLicenseName}`.
 ## Contributing
+`${contributing}`
 ## Tests
+`${tests}`
 ## Questions
-[github username](github profile link)
-Email me at --email-- with any questions!
-
-
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+Find me on GitHub at `[${userName}](https://github.com/${userName})`
+Email me at `${email}` with any questions!
