@@ -81,10 +81,10 @@ function init() {
         .then((answers) => {
             
         // pull license name from license answer
-        const selectedLicenseName = JSON.stringify(answers.license.name, null, "  ");
+        const selectedLicenseName = answers.license.name;
 
         // pull license link from license answer - creates badge
-        const selectedLicenseLink = JSON.stringify(answers.license.link, null, "  ");
+        const selectedLicenseLink = answers.license.link;
 
         // create a variable for the readme content and what should be in it
         const generatereadMEContent = ({ title, description, installation, usage, contributing, tests, userName, email }) =>
