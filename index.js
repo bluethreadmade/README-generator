@@ -33,7 +33,7 @@ const questions = [
         description: 'Usage',
     },
     {
-        type: 'search-list',
+        type: 'list',
         message: 'Select License',
         name: 'license',
         choices: licenseChoices.map(license => ({name: license.name, value: license})),
@@ -79,8 +79,9 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
-            
-         // create a variable for the readme content and what should be in it
+            console.log(JSON.stringify(answers.license.name, null, "  "));
+ 
+        // create a variable for the readme content and what should be in it
         const generatereadMEContent = ({ title, description, installation, usage, contributing, tests, userName, email, license }) =>
         
 `
