@@ -37,7 +37,6 @@ const questions = [
         message: 'Select License',
         name: 'license',
         choices: licenseChoices.map(license => ({name: license.name, value: license})),
-        message: 'License',
     },
     {
         type: 'input',
@@ -114,7 +113,7 @@ Email me at ${email} with any questions!
             const readMEContent = generatereadMEContent(answers);
 
             // call the write to file function to create a file called readme1.md and fill it with the readmecontent
-            writeToFile('README1.md', readMEContent);
+            writeToFile('README.md', readMEContent);
         },
     );
 }
