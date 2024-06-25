@@ -15,49 +15,49 @@ const questions = [
     {
         type: 'input',
         name: 'title',
-        description: 'What is the title of your project',
+        message: 'What is the title of your project',
     },
     {
         type: 'input',
         name: 'description',
-        description: 'Describe your project',
+        message: 'Describe your project',
     },
     {
         type: 'input',
         name: 'installation',
-        description: 'Installation',
+        message: 'Installation',
     },
     {
         type: 'input',
         name: 'usage',
-        description: 'Usage',
+        message: 'Usage',
     },
     {
         type: 'list',
         message: 'Select License',
         name: 'license',
         choices: licenseChoices.map(license => ({name: license.name, value: license})),
-        description: 'License',
+        message: 'License',
     },
     {
         type: 'input',
         name: 'contributing',
-        description: 'Contributing',
+        message: 'Contributing',
     },
     {
         type: 'input',
         name: 'tests',
-        description: 'Tests',
+        message: 'Tests',
     },
     {
         type: 'input',
         name: 'email',
-        description: 'Email Address',
+        message: 'Email Address',
     },
     {
         type: 'input',
         name: 'userName',
-        description: 'GitHub username',
+        message: 'GitHub username',
     },
    
 ];
