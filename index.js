@@ -3,7 +3,7 @@ const inquirer = require("inquirer");
 // resister inquirer searchable list plugin
 inquirer.registerPrompt('search-list', require('inquirer-search-list'));
 const fs = require("fs");
-const badgelinks = require('./badgelinks');
+const badgelinks = require('./assets/js/badgelinks');
 const { title } = require("process");
 
 // set varible to use badgelinks array as the choices array
