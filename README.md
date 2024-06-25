@@ -5,3 +5,6 @@ This is a command-line application that prompts the user for input using the inq
 
 ## License
 This project is licensed under Apache 2.0 License.
+
+## Video
+<iframe src="https://drive.google.com/file/d/19bVGJE_fgBrTlYVI0GxK5dFw36oWCkke/preview" width="640" height="480"></iframe>
